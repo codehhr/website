@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://codehhr.cn/css/cursor.css" />
+    <script src="https://codehhr.cn/js/mousesnow.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Helvetica, sans-serif;
+        user-select: none;
+      }
+      body {
+        background-color: #494f5c;
+      }
+      .main {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main .title span,
+      .main .link,
+      .footer {
+        transition: all 1s;
+      }
+      .main .title span:nth-child(1) {
+        color: #f0efef;
+        font-size: 6rem;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .main .title span:nth-child(2) {
+        margin-right: 4px;
+        color: #f0efef;
+        letter-spacing: 4px;
+        font-weight: 600;
+        font-size: 3.4rem;
+      }
+      .main .title span:nth-child(3) {
+        padding: 0px 14px;
+        font-size: 4rem;
+        font-weight: 900;
+        border-radius: 12px;
+        color: #313131;
+        background-color: #e0b700;
+      }
+      .main .link {
+        margin-top: 160px;
+        outline: none;
+      }
+      .main .link a {
+        background-color: #6a7077;
+        font-family: "Courier New", Courier, monospace, sans-serif;
+        padding: 8px 12px;
+        margin: 12px;
+        font-size: 22px;
+        font-weight: 800;
+        border-radius: 10px;
+        color: #dfdfdf;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .main .link a:first-child {
+        color: #c0c0ff;
+        border: 1px solid transparent;
+        animation: link_custom1 4s infinite alternate;
+      }
+      @keyframes link_custom1 {
+        0% {
+          box-shadow: 0 0 4px #ca00ff;
+        }
+        25% {
+          box-shadow: 0 0 16px #00b5e5;
+        }
+        50% {
+          box-shadow: 0 0 4px #c10bf8;
+        }
+        75% {
+          box-shadow: 0 0 16px #b1da21;
+        }
+        100% {
+          box-shadow: 0 0 4px #20deff;
+        }
+      }
+      .footer {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        text-align: center;
+        color: #b1b1b1;
+        font-size: 18px;
+      }
+      .footer svg {
+        font-size: 1.6rem;
+      }
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.3rem;
+        fill: currentColor;
+        overflow: hidden;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: #ff67f2;
+      }
+      @media screen and (max-width: 980px) {
+        .main .title span:nth-child(1) {
+          font-size: 4.6rem;
+          margin-right: 4px;
+        }
+        .main .title span:nth-child(2) {
+          font-size: 2.2rem;
+        }
+        .main .title span:nth-child(3) {
+          font-size: 2.4em;
+          border-radius: 0.8rem;
+          padding: 0px 10px;
+        }
+        .main .link {
+          margin-top: 80px;
+        }
+        .main .link a {
+          font-size: 1.1rem;
+          font-weight: 600;
+          border-radius: 0.6rem;
+          margin: 10px;
+          padding: 8px 12px;
+        }
+        .footer {
+          font-size: 1.2rem;
+        }
+        .footer svg {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      href="https://codehhr.coding.net/p/codehhr/d/images/git/raw/master/avatar/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- FontAwesome -->
+    <script src="https://at.alicdn.com/t/font_1964619_pgvmfpl74sp.js"></script>
+    <title>Saturday_</title>
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <div class="title">
+          <span>My</span>
+          <span>blog</span>
+          <span>codehhr</span>
+        </div>
+        <div class="link">
+          <a href="https://codehhr.cn" target="_blank"> 常用地址 </a>
+          <a href="https://278fpm.coding-pages.com" target="_blank">
+            永久地址 1
+          </a>
+          <a href="https://codehhr.gitee.io" target="_blank"> 永久地址 2 </a>
+          <div class="out">
+            <a href="https://codehhr.github.io" target="_blank">
+              国外永久地址 1 </a
+            ><a href="https://codehhr.netlify.app" target="_blank">
+              国外永久地址 2
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icondogl"></use>
+      </svg>
+      &copy; 2018 - <span class="year"></span> By
+      <a href="http://codehhr.cn">HHR</a>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icondog"></use>
+      </svg>
+    </footer>
+    <script>
+      document.querySelector(".year").innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>
